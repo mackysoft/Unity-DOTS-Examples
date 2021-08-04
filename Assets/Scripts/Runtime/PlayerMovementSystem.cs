@@ -24,7 +24,7 @@ namespace MackySoft.DOTSExamples {
 			float deltaTime = UnityEngine.Time.deltaTime;
 			Entities
 				.WithAll<Player>()
-				.ForEach((Mover mover,ref Translation translation) => {
+				.ForEach((ref Translation translation,in Mover mover) => {
 					translation.Value += movement * mover.Speed * deltaTime;
 				})
 				.WithBurst()
