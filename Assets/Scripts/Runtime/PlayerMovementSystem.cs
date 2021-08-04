@@ -6,7 +6,7 @@ using Unity.Mathematics;
 
 namespace MackySoft.DOTSExamples {
 	public class PlayerMovementSystem : SystemBase {
-
+		
 		PlayerInputActions m_Input;
 		InputAction m_MoveInput;
 
@@ -18,13 +18,14 @@ namespace MackySoft.DOTSExamples {
 		}
 
 		protected override void OnUpdate () {
-			float deltaTime = UnityEngine.Time.deltaTime;
 			Vector2 input = m_MoveInput.ReadValue<Vector2>();
-			Vector3 movement = new Vector3(input.x,0f,input.y);
+			float3 movement = new float3(input.x,0f,input.y);
+
+			float deltaTime = UnityEngine.Time.deltaTime;
 			Entities
-				.WithAll<Player,Mover>()
-				.ForEach((Mover mover,ref LocalToWorld transform,in Entity entity) => {
-					transform.Value = math.mul(transform.Value,float4x4.Translate(movement * mover.Speed * deltaTime));
+				.WithAll<Player>()
+				.ForEach((Mover mover,ref Translation translation) => {
+					translation.Value += movement * mover.Speed * deltaTime;
 				})
 				.WithBurst()
 				.ScheduleParallel();

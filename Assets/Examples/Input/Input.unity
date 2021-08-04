@@ -365,54 +365,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aecea827c8e6984e9256d85317f5439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MoveInput:
-    m_Name: Move Input
-    m_Type: 0
-    m_ExpectedControlType: Vector2
-    m_Id: 71f20bdd-bd7e-4dc2-a4f9-3c53f1a6da08
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 2D Vector
-      m_Id: 85e15a00-4376-44b9-8d2d-46faaf55b0ae
-      m_Path: 2DVector
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Input
-      m_Flags: 4
-    - m_Name: up
-      m_Id: d6f4d316-9795-41c4-93b4-008f1f8cdded
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Input
-      m_Flags: 8
-    - m_Name: down
-      m_Id: 7857a935-8741-47bf-af95-1f054bf41a26
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Input
-      m_Flags: 8
-    - m_Name: left
-      m_Id: 0bb839b5-3c85-4361-95b4-d8968db56962
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Input
-      m_Flags: 8
-    - m_Name: right
-      m_Id: f58ae62a-144a-4711-960b-2c95a8e20b33
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Input
-      m_Flags: 8
   m_Speed: 5
 --- !u!65 &1327651534
 BoxCollider:
